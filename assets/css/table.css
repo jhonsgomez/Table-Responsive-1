@@ -1,0 +1,328 @@
+/* ========== GOOGLE FONTS ========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* ========== VARIABLES CSS ========== */
+
+:root {
+    /* ========== FONTS ========== */
+    --body-font: 'Roboto', sans-serif;
+
+    /* ========== COLORS ========== */
+    --heading-background-color: 255, 255, 255;
+    --heading-title-color: 50, 57, 63;
+
+    --heading-btn-hover: 0 0 10px rgba(0, 0, 0, 0.5);
+    --heading-btn-add-color: 8, 97, 229;
+    --heading-btn-pdf-color: 244, 15, 2;
+    --heading-btn-excel-color: 29, 111, 66;
+
+    --table-thead-background-color: 8, 97, 229;
+    --table-thead-th-color: 51, 51, 51;
+    --table-tbody-td-color: 85, 85, 85;
+    --table-tbody-td-border-color: 231, 231, 231;
+
+    --table-tbody-btn-hover: 0 0 5px rgba(0, 0, 0, 0.3);
+    --table-tbody-btn-delete-color: 244, 15, 2;
+    --table-tbody-btn-edit-color: 8, 97, 229;
+
+    --pagination-btn-color: 153, 153, 153;
+    --pagination-focus-color: 8, 97, 229;
+
+    /* ========== SIZE TEXT ========== */
+    --heading-title-size: 28px;
+    --heading-title-weight: 400;
+    --heading-btn-size: 15px;
+    --heading-btn-icon-size: 18px;
+
+    --table-thead-th-size: 19px;
+    --table-thead-th-weight: 400;
+    --table-tbody-td-size: 15px;
+    --table-tbody-td-weight: 500;
+    --table-tbody-span-size: 13px;
+    --table-tbody-btn-size: 18px;
+
+    --pagination-btn-size: 14px;
+    --pagination-btn-weight: 500;
+}
+
+/* ========== PANEL ========== */
+
+.panel {
+    font-family: var(--body-font);
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: 0 .3rem .8rem rgba(0, 0, 0, .12);
+}
+
+/* ========== PANEL HEADING ========== */
+
+.panel .panel__heading {
+    background: rgb(var(--heading-background-color));
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-radius: 0;
+    margin: 0;
+}
+
+.panel .panel__heading .heading__container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.panel .panel__heading .heading__title {
+    padding: 0 !important;
+}
+
+.panel .panel__heading .heading__title .title {
+    color: rgb(var(--heading-title-color));
+    font-size: var(--heading-title-size);
+    font-weight: var(--heading-title-weight);
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.panel .panel__heading .heading__btns {
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+
+.panel .panel__heading .heading__btns .heading__btn {
+    font-size: var(--heading-btn-size);
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel .panel__heading .heading__btns .heading__btn i {
+    font-size: var(--heading-btn-icon-size);
+}
+
+.panel .panel__heading .heading__btns .heading__btn:hover {
+    box-shadow: var(--heading-btn-hover);
+}
+
+.panel .panel__heading .heading__btns .heading__btn-add {
+    background-color: rgba(var(--heading-btn-add-color), 0.11);
+    color: rgb(var(--heading-btn-add-color));
+}
+
+.panel .panel__heading .heading__btns .heading__btn-excel {
+    background-color: rgba(var(--heading-btn-excel-color), 0.11);
+    color: rgb(var(--heading-btn-excel-color));
+}
+
+.panel .panel__heading .heading__btns .heading__btn-pdf {
+    background-color: rgba(var(--heading-btn-pdf-color), 0.11);
+    color: rgb(var(--heading-btn-pdf-color));
+}
+
+.panel .panel__body {
+    border-radius: 0;
+}
+
+/* ========== TABLE ========== */
+
+.panel .panel__body .table {
+    overflow-x: auto;
+}
+
+/* ========== TABLE -> THEAD ========== */
+
+.panel .panel__body .table thead {
+    background-color: rgba(var(--table-thead-background-color), 0.18);
+    vertical-align: middle;
+}
+
+.panel .panel__body .table thead tr th {
+    color: rgb(var(--table-thead-th-color));
+    font-size: var(--table-thead-th-size);
+    font-weight: var(--table-thead-th-weight);
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgb(var(--heading-background-color));
+    border-bottom: 0 !important;
+}
+
+.panel .panel__body .table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.panel .panel__body .table thead tr th:last-child {
+    width: 200px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* ========== TABLE -> TBODY ========== */
+
+.panel .panel__body .table tbody tr td {
+    color: rgb(var(--table-tbody-td-color));
+    background: rgb(var(--heading-background-color));
+    font-size: var(--table-tbody-td-size);
+    font-weight: var(--table-tbody-td-weight);
+    padding: 10px;
+    vertical-align: middle;
+    border: 1px solid rgb(var(--table-tbody-td-border-color));
+    text-align: center;
+}
+
+.panel .panel__body .table tbody:before {
+    content: "@";
+    display: block;
+    line-height: 10px;
+    text-indent: -99999px;
+}
+
+.panel .panel__body .table .user__icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px 0 0;
+    border-radius: 100px;
+    display: inline-block;
+}
+
+.panel .panel__body .table .user__icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.panel .panel__body .table tbody td span {
+    font-size: var(--table-tbody-span-size);
+}
+
+.panel .panel__body .table tbody .action__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.panel .panel__body .table tbody .action__list li {
+    margin: 0 3px;
+    display: inline-block;
+}
+
+.panel .panel__body .table tbody .action__list li .body__btn {
+    font-size: var(--table-tbody-btn-size);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.panel .panel__body .table tbody .action__list li .body__btn-delete {
+    color: rgb(var(--table-tbody-btn-delete-color));
+    background-color: rgb(var(--table-tbody-btn-delete-color), 0.11);
+}
+
+.panel .panel__body .table tbody .action__list li .body__btn-edit {
+    color: rgb(var(--table-tbody-btn-edit-color));
+    background-color: rgba(var(--table-tbody-btn-edit-color), 0.11);
+}
+
+.panel .panel__body .table tbody .action__list li .body__btn:hover {
+    box-shadow: var(--table-tbody-btn-hover);
+}
+
+/* ========== PANEL FOOTER ========== */
+
+.panel .panel__footer {
+    background-color: rgb(var(--heading-background-color));
+    padding: 10px 25px 25px;
+    border: none;
+}
+
+/* ========== PAGINATION TABLE ========== */
+
+.pagination {
+    margin: 0;
+}
+
+.pagination li a {
+    color: rgb(var(--pagination-btn-color));
+    font-size: var(--pagination-btn-size);
+    font-weight: var(--pagination-btn-weight);
+    text-align: center;
+    line-height: 32px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0 2px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+.pagination li .page__external {
+    border-radius: 0 !important;
+}
+
+.pagination li .page__external:hover,
+.page__external:focus {
+    background-color: transparent !important;
+    color: rgb(var(--pagination-btn-color)) !important;
+}
+
+.pagination li a:hover,
+.pagination li a:focus,
+.pagination li.active a {
+    color: rgb(var(--heading-background-color));
+    background-color: rgb(var(--pagination-focus-color));
+}
+
+.pagination li:first-child a,
+.pagination li:last-child a {
+    border-radius: 50%;
+}
+
+/* ========== MEDIA QUERYS ========== */
+
+@media only screen and (max-width:623px) {
+    .panel .panel__heading .heading__btns {
+        flex-wrap: wrap;
+    }
+
+    .panel .panel__heading .heading__btns .heading__btn-span {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .panel .panel__heading {
+        text-align: center;
+        padding: 25px 0 10px !important;
+    }
+
+    .panel .panel__heading .heading__container {
+        flex-direction: column !important;
+    }
+
+    .panel .panel__heading .heading__btns {
+        margin-top: 20px !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .panel .panel__heading .heading__title {
+        width: 100% !important;
+    }
+
+    .panel .panel__heading {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .panel .panel__body .table {
+        min-width: 1000px;
+    }
+}
